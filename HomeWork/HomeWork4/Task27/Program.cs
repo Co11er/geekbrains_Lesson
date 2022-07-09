@@ -12,7 +12,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 void SumNumber(int numb)
 {
     int adv = 0;
-    for (int i = 0; i <= numb; i++)
+    for (int i = 0; i < numb; i++)
     {
         adv = adv + numb % 10;
         numb = numb / 10;
