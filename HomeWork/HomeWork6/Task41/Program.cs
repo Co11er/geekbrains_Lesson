@@ -4,6 +4,12 @@
 // -1, -7, 567, 89, 223-> 3
 
 
+string[] input = Console.ReadLine().Split().ToArray(); // разделитель строки
+
+
+
+
+
 Console.Write("Сколько чисел хотите ввести? ");
 int size = Convert.ToInt32(Console.ReadLine());
 
