@@ -37,18 +37,19 @@ double[,] ArrayСhange(int[,] array)
 }
 
 
-double Arithmetic(double[,] arr)
+void Arithmetic(double[,] arr)
 {
     double arithmetic = 0;
-    for (int i = 0; i < arr.GetLength(0); i++)
-    {
-        for (int j = 0; j < arr.GetLength(1); j++)
+    for (int i = 0; i < arr.GetLength(1); i++)
+    {   
+        arithmetic = 0;
+        for (int j = 0; j < arr.GetLength(0); j++)
         {
             arithmetic += arr[j, i];
         }
-        arithmetic = Math.Round(arithmetic / arr.GetLength(1), 1);
+        arithmetic = Math.Round(arithmetic / arr.GetLength(0), 1);
+        Console.Write(arithmetic + " _ ");
     }
-    return arithmetic;
 }
 
 void PrintMatrix(int[,] array)
@@ -74,9 +75,8 @@ void PrintMatrix(int[,] array)
     }
 }
 
-int[,] res = ArrayMatrix(3,3,1,9);
+int[,] res = ArrayMatrix(2, 9, 1, 9);
 PrintMatrix(res);
 double[,] result = ArrayСhange(res);
-double arithmetic = Arithmetic(result);
-Console.Write(arithmetic);
+Arithmetic(result);
 
