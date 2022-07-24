@@ -16,12 +16,12 @@
 void Exchange(int[,] arr)
 {
     int indexFirst = 0;
-    int IndexLast = arr.GetLength(0) - 1;
+    int indexLast = arr.GetLength(0) - 1;
     for (int i = 0; i < arr.GetLength(1); i++)
     {
         int row = arr[indexFirst, i];
-        arr[indexFirst, i] = arr[IndexLast,i];
-        arr[IndexLast, i] = row;
+        arr[indexFirst, i] = arr[indexLast,i];
+        arr[indexLast, i] = row;
     }
 }
 

@@ -28,7 +28,7 @@ int[,] ArrayMatrix(int row, int col, int min, int max)
 }
 void Array(int[,] array, int first, int second)
 {
-    if (first > array.GetLength(0) || second > array.GetLength(1))
+    if (first > array.GetLength(0) - 1 || second > array.GetLength(1) - 1)
     {
         Console.Write($"{first}, {second} -> такого числа в массиве нет");
     }
